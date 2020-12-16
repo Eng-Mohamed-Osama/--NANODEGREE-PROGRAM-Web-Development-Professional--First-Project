@@ -14,35 +14,13 @@ const navegation =document.createElement('nav');
 const navList = document.createElement('ul');
 const container =  document.createDocumentFragment()
 function createTheNavBar(){
-    for(let i = 0 ; i < allTheSections.length ; i ++){
+    for(let i = 0 ; i <= allTheSections.length-1 ; i ++){
     let li =  document.createElement('li');
-    if(i === 0){
 
-        li.textContent = 'Home';
+        li.textContent = allTheSections[i].dataset.set;
 
-    }else if(i === 1){
-
-        li.textContent = 'About us';
-
-    }else if(i === 2){
-
-        li.textContent = 'Services';
-
-    }else if(i === 3){
-
-        li.textContent = 'News';
-
-    }else if(i === 4){
-
-        li.textContent = 'The Team!';
-
-    }else if(i === 5){
-
-        li.textContent = 'Clients';
-    
-    }else if(i === 6){
-        
-        li.textContent = 'Contact Us'
+        if(i === allTheSections.length-1){
+            
         li.classList.add('nav-button');
     }
     container.appendChild(li);
